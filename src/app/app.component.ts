@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'The Weekend Challenge';
+  video = {
+    title: 'Rick Roll',
+    views: 119119119,
+    liked: true
+  }
+  handleClick(){
+    console.log('Someone clicked on button on the template :-)')
+  }
 }
