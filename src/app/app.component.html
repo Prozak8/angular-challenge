@@ -14,11 +14,15 @@
   </li>
 </ul>
 
-<p>Video title: {{video.title}}</p>
-<input [(ngModel)] = "video.name"/>
-<p>Views: {{video.views}}</p>
-<p>Liked: {{video.liked}}</p>
+<ul>
+  <li *ngFor="let video of videos">
+    <p>Video title: {{video.title}}</p>
+    <p>Views: {{video.views}}</p>
+    <p>Liked: {{video.liked}}</p>
+  </li>
+</ul>
 
-<button (click)="handleClick()">Console log me</button>
+<button (click)="handleClick(isShown = true)">Show text</button>
+<p *ngIf="isShown">This should be hidden or shown</p>
 
 
